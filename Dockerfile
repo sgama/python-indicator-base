@@ -1,11 +1,11 @@
-FROM python:3.6.5-alpine
+FROM python:3.6.5
 LABEL maintainer="samsongama@gmail.com"
 
 RUN mkdir build && cd build && apk update && \
     apk add musl-dev wget git build-base && \
     pip install cython && \
     ln -s /usr/include/locale.h /usr/include/xlocale.h  && \
-    pip install numpy tensorflow && \
+    pip install numpy pandas tensorflow && \
     wget http://prdownloads.sourceforge.net/ta-lib/ta-lib-0.4.0-src.tar.gz && \
     tar -xvzf ta-lib-0.4.0-src.tar.gz && \
     cd ta-lib/ && \
