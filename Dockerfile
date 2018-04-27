@@ -14,4 +14,4 @@ RUN mkdir build && cd build && apk update && \
     cd / && \
     git clone https://github.com/mrjbq7/ta-lib.git  && cd ta-lib && python setup.py install && \
     cd / && \
-    apk del musl-dev wget git build-base && rm -rf /build/ /ta-lib/ && apk clean
+    apk del musl-dev wget git build-base && rm -rf /build/ /ta-lib/
